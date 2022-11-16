@@ -97,6 +97,7 @@ body a:hover {
 .form-input::placeholder {
    color: #adadad;
 }
+
 .underline::after {
    content: "";
    position: absolute;
