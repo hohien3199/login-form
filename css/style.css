@@ -180,7 +180,7 @@ body a:hover {
    justify-content: center;
 }
 
-.form-socials a {
+.socials-items {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -189,7 +189,7 @@ body a:hover {
    font-size: 24px;
    color: #fff;
    border-radius: 50px;
-   margin: 20px 10px;
+   margin: 10px;
    transition: all 0.3s ease-in-out;
 }
 
@@ -235,14 +235,23 @@ body a:hover {
    }
 
    .form-head h1 {
-      padding: 250px 0 50px;
+      padding: 200px 0 50px;
       font-size: 54px;
    }
 
    .form-label {
       font-size: 18px;
    }
+
+   .form-button {
+      margin: 50px 0;
+   }
+
+   .form-footer {
+      margin-top: 100px;
+   }
+
    .form-signup {
-      margin-bottom: 50px;
+      margin: 10px 0 50px 0;
    }
 }
