@@ -46,19 +46,17 @@ body a:hover {
    color: var(--text-color);
    line-height: 24px;
    display: flex;
-   justify-content: center;
    align-items: center;
 }
 
 .login-form {
    width: 100%;
-   height: auto;
 }
 
 .form-head h1 {
    font-size: 39px;
    color: #333333;
-   padding: 0 0 50px;
+   padding: 0 0 30px;
 }
 
 .form-items {
@@ -225,4 +223,19 @@ body a:hover {
 
 .form-signup a {
    color: #333;
+}
+
+@media only screen and (min-width: 390px) {
+   :root {
+      --spacing: 40px;
+   }
+
+   .form-head h1 {
+      padding: 250px 0 50px;
+      font-size: 54px;
+   }
+
+   .form-label {
+      font-size: 18px;
+   }
 }
