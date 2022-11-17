@@ -225,9 +225,13 @@ body a:hover {
    color: #333;
 }
 
-@media only screen and (min-width: 390px) {
+@media only screen and (max-width: 390px) {
    :root {
       --spacing: 40px;
+   }
+
+   .wrap-login {
+      height: fit-content;
    }
 
    .form-head h1 {
@@ -237,5 +241,8 @@ body a:hover {
 
    .form-label {
       font-size: 18px;
+   }
+   .form-signup {
+      margin-bottom: 50px;
    }
 }
