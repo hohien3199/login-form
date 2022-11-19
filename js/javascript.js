@@ -14,6 +14,7 @@ function signup(e) {
 
    if (userLocal != null) {
       alert("Username already exits!");
+      document.getElementById("username").focus();
    } else if (password == cf_password) {
       var json = JSON.stringify(user);
       localStorage.setItem(username, json);
@@ -37,14 +38,15 @@ function login(e) {
    var data = JSON.parse(user);
    if (user == null) {
       alert("Wrong username or password!");
+      document.getElementById("username").focus();
    } else if ((username = data.username && password == data.password)) {
       alert("Logged in successfully!");
       window.location.href = "https://linktr.ee/hohien";
    } else {
       alert("Login failed!");
+      document.getElementById("username").focus();
    }
    inputs.forEach((input) => {
       input.value = "";
    });
-   document.getElementById("username").focus();
 }
