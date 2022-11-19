@@ -175,6 +175,7 @@ body a:hover {
 
 .form-text {
    color: #6a6a6a;
+   font-size: 14px;
 }
 
 .form-socials {
@@ -221,7 +222,8 @@ body a:hover {
 
 .form-signup {
    text-transform: uppercase;
-   margin: 20px 0 0 0;
+   margin: 5px 0 0 0;
+   font-size: 18px;
 }
 
 .form-signup a {
