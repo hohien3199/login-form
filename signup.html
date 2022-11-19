@@ -16,30 +16,33 @@
 
 <body>
     <div class="wrap-login">
-        <div class="login-form">
+        <form class="signup-form" onsubmit="signup()">
             <div class="form-head text--center">
                 <h1>Sign Up</h1>
             </div>
             <div class="form-items">
                 <label class="form-label" for="name">Username</label>
-                <input class="form-input" type="text" placeholder="Type your username" required />
+                <input class="form-input" id="username" type="text" name="username" autocomplete="off"
+                    placeholder="Type your username" required />
                 <ion-icon class="form-icon" name="person-outline"></ion-icon>
                 <span class="underline"></span>
             </div>
             <div class="form-items">
                 <label class="form-label" for="password">Password</label>
-                <input class="form-input" type="password" placeholder="Type your password" required />
+                <input class="form-input" id="password" type="password" name="password" autocomplete="off"
+                    placeholder="Type your password" required />
                 <ion-icon class="form-icon" name="lock-closed-outline"></ion-icon>
                 <span class="underline"></span>
             </div>
             <div class="form-items">
                 <label class="form-label" for="cf-password">Type your password again</label>
-                <input class="form-input" type="password" placeholder="Confirm your password" required />
+                <input class="form-input" id="cf-password" type="password" name="cf-password" autocomplete="off"
+                    placeholder="Confirm your password" required />
                 <ion-icon class="form-icon" name="lock-closed-outline"></ion-icon>
                 <span class="underline"></span>
             </div>
             <div class="form-button">
-                <button id="btn_signup" onclick="signupAlert()">Sign Up</button>
+                <button id="btn_signup">Sign Up</button>
                 <div class="button-bg"></div>
             </div>
             <div class="form-text text--center">Or Sign Up Using</div>
@@ -60,7 +63,7 @@
                     <a href="index.html"> Login </a>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </body>
 <script src="js/javascript.js"></script>
