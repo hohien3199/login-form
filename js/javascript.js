@@ -5,22 +5,26 @@ function signup(e) {
    var username = document.getElementById("username").value;
    var password = document.getElementById("password").value;
    var cf_password = document.getElementById("cf-password").value;
+   var userLocal = localStorage.getItem(username);
+   var data = JSON.parse(userLocal);
    var user = {
       username: username,
       password: password,
-      cf_password: cf_password,
    };
-   if (password == cf_password) {
+
+   if (userLocal != null) {
+      alert("Username already exits!");
+   } else if (password == cf_password) {
       var json = JSON.stringify(user);
       localStorage.setItem(username, json);
-      alert("Sign Up Success!");
-      window.location.href = "index.html";
+      alert("Sign up success!");
    } else {
-      alert("Sign Up Failed!");
-      inputs.forEach((input) => {
-         input.value = "";
-      });
+      alert("Sign up failed!");
+      document.getElementById("username").focus();
    }
+   inputs.forEach((input) => {
+      input.value = "";
+   });
 }
 
 function login(e) {
@@ -32,17 +36,15 @@ function login(e) {
    var user = localStorage.getItem(username);
    var data = JSON.parse(user);
    if (user == null) {
-      alert(
-         "Account does not exist!\nPlease register an account, then login again!"
-      );
-      window.location.href = "signup.html";
+      alert("Wrong username or password!");
    } else if ((username = data.username && password == data.password)) {
       alert("Logged in successfully!");
       window.location.href = "https://linktr.ee/hohien";
    } else {
       alert("Login failed!");
-      inputs.forEach((input) => {
-         input.value = "";
-      });
    }
+   inputs.forEach((input) => {
+      input.value = "";
+   });
+   document.getElementById("username").focus();
 }
